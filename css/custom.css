@@ -986,6 +986,26 @@
   .div-repro{
     padding-left: 3px;
   }
+
+  .div-pause-i, .div-repro-i{
+    background-color: #ffffff;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+    cursor: pointer;
+  }
+  .div-pause-i:hover, .div-repro-i:hover{
+    background-color: #ff0000;
+  }
+
+  .div-repro-i{
+    padding-left: 3px;
+  }
   
   .title-1 {
     color: white;
@@ -1790,10 +1810,16 @@
         padding-top: 0px !important;
         padding-bottom: 30px !important;
     }
+
     .cssbuttons-io-button-c{
         margin-left: 9% !important;
         width: 79.5% !important;
-        font-size: 16px !important;
+        font-size: 14px !important;
+    }
+
+    .cssbuttons-io-button{
+        padding-left: 21%;
+        font-size: 14px !important;
     }
 
     .carousel-1{
@@ -1807,7 +1833,7 @@
 
     .ic1 .title-ic1{
         width: 240px !important;
-        margin-left: 12% !important;
+        margin-left: 7% !important;
     }
 
     .ic1 .p-ic1{
@@ -1822,14 +1848,14 @@
 
     .ic2 .img-ic2{
         width: 270px !important;
-        margin-left: 12% !important;
+        margin-left: 1% !important;
         margin-top: -60px !important;
         margin-bottom: 30px !important;
     }
 
     .ic2 .title-ic2{
         width: 140px !important;
-        margin-left: 29% !important;
+        margin-left: 23% !important;
         padding-bottom: 20px !important;
     }
 
@@ -1840,19 +1866,19 @@
     /* ---------------------- */
 
     .carousel-3{
-        padding-top: 0px !important;
-        padding-bottom: 0px !important;
+        padding-top: 10px !important;
+        padding-bottom: 30px !important;
     }
 
     .ic3 .img-ic3{
-        margin-left: 2% !important;
+        margin-left: 1% !important;
         margin-top: -60px !important;
         margin-bottom: 30px !important;
     }
 
     .ic3 .title-ic3{
         width: 160px !important;
-        margin-left: 26% !important;
+        margin-left: 21% !important;
         padding-bottom: 20px !important;
     }
 
@@ -1864,8 +1890,8 @@
     /* ----------------------- */
 
     .carousel-4{
-        padding-top: 0px !important;
-        padding-bottom: 0px !important;
+        padding-top: 20px !important;
+        padding-bottom: 20px !important;
     }
     
     .ic4 .img-ic4{
@@ -1875,8 +1901,7 @@
     }
 
     .ic4 .title-ic4{
-        width: 280px !important;
-        /* margin-left: 28% !important; */
+        width: 240px !important;
         margin: 0 auto !important;
         padding-bottom: 20px !important;
     }
@@ -1970,6 +1995,18 @@
     .r-inf a{
         padding: 7px 27px;
     }
+    .shop-content-store{
+        grid-template-columns: repeat(auto-fit, minmax(150px, 251px)) !important;
+        gap: 1rem !important;
+    }
+    
+    .product-title{
+        font-size: .9rem;
+    }
+    
+    /* .price{
+        font-size: .8rem;
+    } */
 }
 
 @media (max-width: 390px){

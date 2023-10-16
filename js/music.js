@@ -9,3 +9,4 @@ play.addEventListener("click", () => {
 pause.addEventListener("click", () => {
     sound.pause()
 })
+
