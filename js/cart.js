@@ -126,7 +126,18 @@ function addProductTocart(title, price, productImg){
             return;
         }
     }
-    var cartBoxContent = `
+    if (window.location.pathname === "index.html"){
+        var cartBoxContent = `
+    <img src="${productImg}" alt="" class="cart-img">
+    <div class="detail-box">
+        <div class="cart-product-title">${title}</div>
+        <div class="cart-price">${price}</div>
+        <input type="number" value="1" class="cart-quantity">
+    </div>
+    <img src="img/trash-alt-solid-24.png" alt="" class="cart-remove">
+    `
+    }else{
+        var cartBoxContent = `
     <img src="${productImg}" alt="" class="cart-img">
     <div class="detail-box">
         <div class="cart-product-title">${title}</div>
@@ -135,6 +146,7 @@ function addProductTocart(title, price, productImg){
     </div>
     <img src="../img/trash-alt-solid-24.png" alt="" class="cart-remove">
     `
+    }
 
     cartShopBox.innerHTML = cartBoxContent
     cartItems.append(cartShopBox)

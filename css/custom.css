@@ -1,9 +1,45 @@
 .shop-content{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 300px));
-    gap: 3.5rem !important;
-    justify-content: center;
+    display: flex;
+    gap: 1.5rem !important;
     margin-bottom: 50px;
+    overflow-y: auto;
+    overflow-x: auto;
+    padding-bottom: 10px !important;
+}
+
+.f-left{
+    position: relative;
+    top: -300px;
+    left: -45px;
+    cursor: pointer;
+}
+
+.f-right{
+    position: relative;
+    top: -300px;
+    right: -92%;
+    cursor: pointer;
+}
+
+.shop-content::-webkit-scrollbar {
+    height: 10px;
+}
+.shop-content::-webkit-scrollbar-track {
+    background: rgb(255, 255, 255);
+}
+.shop-content::-webkit-scrollbar-thumb {
+    background-color: rgb(255, 255, 255);    
+    border-radius: 50px;       
+    border: 1px solid rgb(255, 255, 255);  
+}
+
+.m-swipe{
+    display: none;
+}
+
+.shop-content #card-c{
+    min-width: 245px !important;
+    object-fit: cover;
 }
 
 .shop-content-store{
@@ -1292,6 +1328,28 @@
 
 
 @media (max-width:700px){
+    .m-swipe{
+        display: block;
+        width: 50px;
+        margin-top: -50px;
+        margin-left: 40%;
+        position: relative;
+        animation: move 2s infinite alternate;
+    } 
+    
+    @keyframes move {
+        from {left: 0;}
+        to {left: 15%;}
+    } 
+
+    .f-left{
+        display: none;
+    }
+    
+    .f-right{
+        display: none;
+    }
+
     .img-pay-succes{
         margin-left: 30% !important;
     }
@@ -1623,6 +1681,10 @@
     #categoria-celular{
         display: block !important;
     }
+
+    .contact-us{
+        padding-left: 10% !important;
+    }
 }
 
 
@@ -1677,6 +1739,13 @@
     .terms-conditions{
         margin-left: 23%;
     }
+
+    .contact-us{
+        padding-left: 20% !important;
+    }
+    .f-right{
+        right: -93%;
+    }
 }
 
 @media (min-width: 1400px){
@@ -1697,6 +1766,12 @@
     }
     .terms-conditions{
         margin-left: 25%;
+    }
+    .contact-us{
+        padding-left: 22% !important;
+    }
+    .f-right{
+        right: -94%;
     }
 }
 
@@ -1724,6 +1799,12 @@
     .terms-conditions{
         margin-left: 32%;
     }
+    .contact-us{
+        padding-left: 24% !important;
+    }
+    .f-right{
+        right: -95%;
+    }
 }
 
 @media (min-width:1550px){
@@ -1736,6 +1817,9 @@
     #text-end{
         width: 102% !important;  
     }
+    .f-right{
+        right: -96%;
+    }
 }
 
 @media (min-width:1750px){
@@ -1744,6 +1828,9 @@
     }
     .terms-conditions{
         margin-left: 34%;
+    }
+    .contact-us{
+        padding-left: 25% !important;
     }
 }
 
@@ -1756,6 +1843,9 @@
     }
     #text-end{
         width: 101.95% !important;  
+    }
+    .contact-us{
+        padding-left: 35% !important;
     }
 }
 
