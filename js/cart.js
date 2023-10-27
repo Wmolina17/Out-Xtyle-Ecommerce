@@ -11,6 +11,22 @@ let closeFavorites = document.querySelector("#close-cart-favorites")
 // background
 // let fondo = document.querySelector(".fondo-negro")
 
+// mensaje agregado
+let equis = document.getElementsByClassName("equis")[0]
+let addGood = document.getElementsByClassName("cont-g-add")[0]
+
+// mensaje ya agregado
+let equisAl = document.getElementsByClassName("equis-al")[0]
+let messageAlr = document.getElementsByClassName("cont-al-add")[0]
+
+equis.onclick = () => {
+    addGood.style.top = "-100%"
+}
+equisAl.onclick = () => {
+    messageAlr.style.top = "-100%"
+}
+
+
 // open cart
 cartIcon.onclick = () =>{
     cart.classList.add("active")
@@ -102,6 +118,9 @@ function quantityChanged(event){
 
 // addCartClicked
 function addCartClicked(event){
+    let addGood = document.getElementsByClassName("cont-g-add")[0]
+    addGood.style.top = "30px"
+
     var newElement = document.getElementsByClassName("new-product")[0]
     newElement.style.background ="red"
 
@@ -122,11 +141,13 @@ function addProductTocart(title, price, productImg){
     var cartItemsNames = cartItems.getElementsByClassName("cart-product-title")
     for (var i = 0; i < cartItemsNames.length; i++){
         if (cartItemsNames[i].innerText == title){
-            alert("Este producto ya esta agregado a tu carrito")
+            let messageAlr = document.getElementsByClassName("cont-al-add")[0]
+            messageAlr.style.top ="30px"
+            addGood.style.top = "-100%"
             return;
         }
     }
-    if (window.location.pathname === "index.html"){
+    if (window.location.pathname === "/index.html"){
         var cartBoxContent = `
     <img src="${productImg}" alt="" class="cart-img">
     <div class="detail-box">
