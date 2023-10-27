@@ -147,7 +147,7 @@ function addProductTocart(title, price, productImg){
             return;
         }
     }
-    if (window.location.pathname === "/index.html"){
+    if (window.location.hostname === "https://wmolina17.github.io/Out-Xtyle-With-Stripe/" || "https://wmolina17.github.io/Out-Xtyle-With-Stripe/index.html"){
         var cartBoxContent = `
     <img src="${productImg}" alt="" class="cart-img">
     <div class="detail-box">
